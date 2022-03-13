@@ -1,0 +1,17 @@
+h1 {
+    border-bottom: 1px solid white;
+    color: #3d3d3d;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cardModified {
+    width: fit-content;
+    margin: 0 auto;
+}
