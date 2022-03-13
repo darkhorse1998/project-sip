@@ -2,7 +2,7 @@
   "name": "step-up-sip-excel-generator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/",
+  "homepage": "https://darkhorse1998.github.io/project-sip",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
