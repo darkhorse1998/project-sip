@@ -10,6 +10,7 @@ function Form() {
   const [stepUpPercentage, setStepUpPercentage] = useState();
   const [numOfYears, setNumOfYears] = useState();
   const [sipStartYear, setSipStartYear] = useState();
+  const [returns, setReturns] = useState();
   const [currency, setCurrency] = useState("INR");
   const [excel, setExcel] = useState(false);
 
@@ -66,6 +67,12 @@ function Form() {
           value={sipStartYear}
           onChange={(e) => setSipStartYear(e.target.value)}
         />
+      <label>Expected Returns:</label>
+        <input required
+          type="text"
+          value={returns}
+          onChange={(e) => setReturns(e.target.value)}
+        />
       <div className="radioButtons">
       <span>
         <label>INR: </label> <input
@@ -97,6 +104,7 @@ function Form() {
                   stepUpPercentage={stepUpPercentage}
                   numOfYears={numOfYears}
                   sipStartYear={sipStartYear}
+                  returns={returns}
                   currency={currency}
                 />}
     

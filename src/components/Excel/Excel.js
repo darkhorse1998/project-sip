@@ -7,7 +7,7 @@ function Excel(props){
     const tableHeaders = [
         "SIP Amount", "Year", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
     ]
-    const rate = 0.12;
+    const rate = parseFloat(props.returns)/100.0;
     const rateMultiplier = 1.0 + (rate/12.0);
     var yearCounter = -1;
     const yearsList = getData()[0];
