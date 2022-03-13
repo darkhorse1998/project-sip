@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Excel from '../Excel/Excel';
+import Note from "../Modal/Note";
 import './Form.css';
 
 
@@ -14,6 +15,7 @@ function Form() {
   const [currency, setCurrency] = useState("INR");
   const [excel, setExcel] = useState(false);
 
+  
 
   const submitHandler = () => {
     if(initialAmount && sipStartAmount && stepUpPercentage &&
@@ -27,6 +29,7 @@ function Form() {
 
   return (
     <React.Fragment>
+    {!excel && <div className="note"><Note /></div>}
     {excel && <div className="checkAnother"><Button variant="danger" onClick={() => window.location.reload(false)}>Check Another</Button></div>}
     {!excel && <h1 classname="formTitle">INVESTMENT DETAILS</h1>}
     {!excel &&
@@ -69,26 +72,31 @@ function Form() {
         />
       <label>Expected Returns:</label>
         <input required
-          type="text"
+          type="number"
           value={returns}
           onChange={(e) => setReturns(e.target.value)}
         />
+      
+      
       <div className="radioButtons">
-      <span>
-        <label>INR: </label> <input
+        <label>Currency</label>
+        <label className="labels">INR: </label>
+        <input
+          key="INR"
           name="currency"
           type="radio"
           value="INR"
-          checked
+          checked={true}
           onChange={(e) => setCurrency("INR")}
         />
-        <label>Others: </label> <input
+        <label>Others:</label>
+        <input
+          key="Others"
           name="currency"
           type="radio"
-          value="INR"
+          value="Others"
           onChange={(e) => setCurrency("Others")}
-        /> 
-      </span>
+        />
       </div> 
     </form>}
     {!excel &&

@@ -41,7 +41,7 @@ function Excel(props){
     return(
         <React.Fragment>
         <h1>SIP JOURNEY</h1>
-        <Table striped borderless hover variant="dark" size="md">
+        <Table striped borderless hover responsive="sm" variant="dark" size="md">
             <thead>
                 <tr>
                     {tableHeaders.map((header)=>(
