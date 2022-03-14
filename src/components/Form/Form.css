@@ -67,3 +67,14 @@ h1 {
 .note {
   text-align: right;
 }
+
+.table-responsive-sm {
+  overflow: auto;
+  table-layout: auto !important;
+} 
+
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: x-large;
+  }
+}

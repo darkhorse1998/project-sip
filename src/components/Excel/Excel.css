@@ -14,4 +14,11 @@ h1 {
 .cardModified {
     width: fit-content;
     margin: 0 auto;
+    margin-top: 20px;
 }
+
+@media only screen and (max-width: 900px) {
+    h1 {
+      font-size: x-large;
+    }
+  }
