@@ -1,5 +1,9 @@
+import 'chart.js/auto';
 import React from "react";
 import { Card, Table } from "react-bootstrap";
+import DoughnutChart from "../Doughnut/DoughnutChart";
+
+
 import './Excel.css'
 
 function Excel(props){
@@ -15,11 +19,19 @@ function Excel(props){
     var lastCell = parseFloat(props.initialAmount);
     var nextCell = parseFloat(1);
 
+    //Doughnut props
+    var colorLabels = ['Invested Amount ', 'Estimated Returns'];
+    var datasetLabel = "Investment Breakout";
+    var backgroundColor = [
+        'rgb(255, 99, 132)',    
+        'rgb(255, 205, 86)'
+      ];
+    
     function getData() {
-        const y = [];
-        const sip = [];
-        var sipAmount = parseInt(props.sipStartAmount);
-        const stepUp = parseInt(props.stepUpPercentage);
+        var y = [];
+        var sip = [];
+        var sipAmount = parseFloat(props.sipStartAmount);
+        const stepUp = parseFloat(props.stepUpPercentage);
         var i = 0;
         while (i < parseInt(props.numOfYears)) {
             y.push(parseInt(props.sipStartYear) + i);
@@ -35,8 +47,6 @@ function Excel(props){
         lastCell = nextCell;
         return nextCell.toFixed(2);
     }
-
-    
     
     return(
         <React.Fragment>
@@ -78,6 +88,18 @@ function Excel(props){
                                         lastCell.toLocaleString()
                                         }
         </h1>
+        
+        <div className='doughnutchart'>
+        <DoughnutChart
+            initialAmount={props.initialAmount}
+            sipList={sipList}
+            lastCell={lastCell}
+            colorLabels={colorLabels}
+            datasetLabel={datasetLabel}
+            backgroundColor={backgroundColor}
+        />
+        </div>
+        
         </Card>
         </React.Fragment>
     );
