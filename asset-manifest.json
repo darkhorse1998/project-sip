@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/project-sip/static/css/main.db18a35f.css",
-    "main.js": "/project-sip/static/js/main.5c231566.js",
+    "main.js": "/project-sip/static/js/main.d50ff817.js",
     "static/js/787.3e1c950a.chunk.js": "/project-sip/static/js/787.3e1c950a.chunk.js",
     "index.html": "/project-sip/index.html",
     "main.db18a35f.css.map": "/project-sip/static/css/main.db18a35f.css.map",
-    "main.5c231566.js.map": "/project-sip/static/js/main.5c231566.js.map",
+    "main.d50ff817.js.map": "/project-sip/static/js/main.d50ff817.js.map",
     "787.3e1c950a.chunk.js.map": "/project-sip/static/js/787.3e1c950a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db18a35f.css",
-    "static/js/main.5c231566.js"
+    "static/js/main.d50ff817.js"
   ]
 }
