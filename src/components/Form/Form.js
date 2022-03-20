@@ -21,6 +21,7 @@ function Form() {
     if(initialAmount && sipStartAmount && stepUpPercentage &&
         numOfYears && sipStartYear && currency){
           setExcel(true)
+          window.scrollTo(0,0);
         }
     else{
       alert("Please fill up all the fields")
